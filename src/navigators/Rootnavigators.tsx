@@ -1,10 +1,11 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {color} from '../../assets/colors';
+import HomeNavigator from './HomeNavigator';
 import Home from 'react-native-vector-icons/Entypo';
 const Tab = createBottomTabNavigator();
 
-export default function Rootnavigators() {
+export default function RootNavigators() {
   return (
     <Tab.Navigator
       initialRouteName="HomeScreen"
@@ -21,9 +22,8 @@ export default function Rootnavigators() {
       <Tab.Screen
         name="HomeScreen"
         component={HomeNavigator} // Burada HomeNavigator'ı içe aktardığınızdan emin olun
-        options={{
-          tabBarIcon: {color},
-        }}
+       
+      
       />
     </Tab.Navigator>
   );
